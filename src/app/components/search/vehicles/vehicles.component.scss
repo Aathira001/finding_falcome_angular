@@ -1,0 +1,12 @@
+mat-button-toggle-group {
+    display: flex;
+    flex-direction: column;
+
+    .mat-button-toggle-disabled {
+        background-color: #424242a8;
+    }
+
+    .mat-button-toggle-checked {
+        background-color: #0b587c;
+    }    
+}

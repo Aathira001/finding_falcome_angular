@@ -1,0 +1,23 @@
+:host {
+    display: grid;
+    grid-template-areas: "header"
+                         "mainBody"
+                         "footer";
+    grid-template-rows: 9% 86% 5%;
+    height: 100vh; 
+    background: #360033;
+    background: -webkit-linear-gradient(to bottom, #360033, #0b8793);
+    background: linear-gradient(to bottom, #360033, #0b8793);            
+}
+
+.screens {
+    grid-area: mainBody;
+}
+
+app-header {
+    grid-area: header;
+}
+
+app-footer {
+    grid-area: footer;
+}

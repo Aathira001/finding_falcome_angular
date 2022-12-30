@@ -1,0 +1,15 @@
+mat-toolbar {
+     backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0);
+    box-shadow: 0 8px 32px 0 rgb(13 16 68 / 37%);
+    color: #A5A5A5;
+
+    .spacer{
+        flex: 1 1 auto;
+    }
+
+    a {
+        margin-right: 1%;
+    }
+}

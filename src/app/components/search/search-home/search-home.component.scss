@@ -1,0 +1,33 @@
+:host {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    margin: 5%;
+    max-height: 85%;
+    overflow-y: auto;
+
+    .main {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-column-gap: 5%;
+
+        .cards {
+            height: 25rem;
+            margin: 10%;
+            background: rgba( 255, 255, 255, 0.25 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 4px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-column-gap: 5%;
+        }
+    }    
+
+    .searchFooter {
+        text-align: center;
+        color: white;
+        font-weight: bolder;
+        font-size: x-large;
+    }
+}

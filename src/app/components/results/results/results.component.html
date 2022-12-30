@@ -1,0 +1,14 @@
+<div class="cards">
+    <div class="card-header" [ngClass]="missionStatus.status ? 'success' : 'failed'">
+        <h2 [innerText]="missionStatus.status ? 'SUCCESS!' : 'DEFEATED'"></h2>
+    </div>
+    <div class="card-body" *ngIf="missionStatus.status; else failed">
+        <h2>Succcess! Congratulations on Finding Falcone. King Shah is mighty pleased!</h2>
+        <h3>Time Taken: {{timeTaken}}</h3>
+        <h3> Planet Found: {{planet}}</h3>
+    </div>
+    <ng-template class="card-body" #failed>
+        <h1> Uh-oh looks like the queen got away this time!</h1>
+    </ng-template>
+    <button mat-raised-button color="accent" (click)="playAgain()">Play Again</button>    
+</div>

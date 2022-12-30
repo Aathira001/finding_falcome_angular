@@ -1,0 +1,5 @@
+<mat-button-toggle-group [disabled]="!selectedPlanet" [(ngModel)]="toggleVal">
+    <mat-button-toggle *ngFor="let vehicle of vehicles" [value]="vehicle.name" [disabled]="selectedPlanet ? (vehicle.max_distance < selectedPlanet.distance) || vehicle.total_no < 1 : true" (change)="vehicleSelected(vehicle)">
+        {{vehicle.name}} ({{vehicle.total_no}})
+    </mat-button-toggle>
+</mat-button-toggle-group>

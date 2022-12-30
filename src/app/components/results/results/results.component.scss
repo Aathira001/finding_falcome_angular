@@ -1,0 +1,38 @@
+.cards {
+            height: 25rem;
+            margin: 5%;
+            background: rgba( 255, 255, 255, 0.71 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 4px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+            display: grid;
+            grid-template-rows: 1fr 4fr;;
+            grid-column-gap: 5%;
+            text-align: center;
+
+            button {
+                width: 25%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 1%;
+            }
+
+            .card-header {
+                border-radius: 10px;
+                text-align: center;
+                color: whitesmoke;
+
+                &.success {
+                    background-color: green;
+                }
+
+                &.failed {
+                    background-color: red;
+                }
+            }
+
+            .card-body {
+                display: grid;
+            }
+}

@@ -1,0 +1,15 @@
+<div class="main">
+    <div class="cards" *ngFor="let selectedPlanet of selectedPlan; let i = index">
+        <app-planets [planets]="planets" (selectedPlanet)="updateSelectedPlanet($event, i)"></app-planets>
+        <app-vehicles 
+            [vehicles]="vehicles" [selectedPlanet]="selectedPlanets[i]"
+            (selectedVehicle)="updateSelectedVehicle($event, i)">
+        </app-vehicles>
+    </div>
+</div>
+
+<div class="searchFooter">
+    Total Time : {{totalTime}}
+    <button mat-raised-button color="accent" [disabled]="!(selectedVehicleCount === 4)" (click)="findFalcone()">Find
+        Falcone</button>
+</div>

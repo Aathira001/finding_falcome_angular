@@ -1,0 +1,13 @@
+
+<form>
+    <mat-form-field appearance="fill">
+        <input type="text" placeholder="Select Planet" matInput [formControl]="planetFormControl" [matAutocomplete]="auto">
+        <mat-autocomplete autoActiveFirstOption  #auto="matAutocomplete" (optionSelected)="planetSelected($event.option.value)">
+            <mat-option *ngFor="let planetOptions of filteredPlanets | async" [value]="planetOptions.name" [disabled]="planetOptions.selected">
+                {{planetOptions.name}}
+            </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+</form>
+<img *ngIf="selectPlanet" src="../../../../assets/planets/{{selectPlanet}}.png" width="100" height="100">
+
